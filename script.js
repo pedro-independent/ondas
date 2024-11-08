@@ -6,7 +6,6 @@ let colorTransparent ="var(--base-color-brand--transparent)";
 
 gsap.registerPlugin(ScrollTrigger);
 
-/* seu porco */
 /* Homepage Video Reveal */
 
 let tl = gsap.timeline({
