@@ -1,6 +1,7 @@
 
 let colorWhite = "var(--base-color-neutral--white)";
 let colorBlue ="var(--base-color-brand--dark-blue)";
+let colorLightBlue ="var(--base-color-brand--main-blue)";
 let colorTransparent ="var(--base-color-brand--transparent)";
 
 
@@ -13,12 +14,11 @@ let tl = gsap.timeline({
         trigger:'.section_home-hero',
         start: 'top top',
     end: "bottom top",
-    scrub: 1,
+    scrub: true,
     pin: true, 
     }
-});
-
-tl.to('.home-hero-vid', {
+})
+.to('.home-hero-vid', {
     width: "100%", duration: 1
 });
 
@@ -28,12 +28,14 @@ gsap.set(".navbar", {
     backgroundColor: colorTransparent,
   });
 
-// gsap.set(".navbar_menu", {
-//     backgroundColor: colorWhite,
-//   });
 
-gsap.set([".navbar_link", ".dropdown-chevron", ".navbar-logo", ".navbar-logo-text"], {
+gsap.set([".navbar_link", ".dropdown-chevron", ".navbar-logo", ".navbar-logo-text", ], {
   color: colorWhite,
+});
+
+gsap.set(".button.navbar-menu-button", {
+  backgroundColor: colorWhite,
+  color: colorLightBlue
 });
 
 
@@ -45,18 +47,15 @@ gsap.set([".navbar_link", ".dropdown-chevron", ".navbar-logo", ".navbar-logo-tex
       scrub: true,
       markers: false,
     },
-  });
-
-  tlNav.to(".navbar", {
+  })
+  .to(".navbar", {
     backgroundColor: colorWhite,
-  });
-  
-  tlNav.to(".navbar_menu", {
-    color: colorBlue,
-  });
-
-
-  tlNav.to([".navbar_link", ".dropdown-chevron", ".navbar-logo", ".navbar-logo-text"], {
-    color: colorBlue,
-  });
+  })
+  .to([".navbar_link", ".dropdown-chevron", ".navbar-logo", ".navbar-logo-text"], {
+    color: colorBlue, 
+  }, '<')
+  .to(".button.navbar-menu-button", {
+    backgroundColor: colorBlue,
+    color: colorWhite
+  }, '<');
   
