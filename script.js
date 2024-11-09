@@ -1,4 +1,3 @@
-
 let colorWhite = "var(--base-color-neutral--white)";
 let colorBlue ="var(--base-color-brand--dark-blue)";
 let colorLightBlue ="var(--base-color-brand--main-blue)";
@@ -23,6 +22,8 @@ let tl = gsap.timeline({
 });
 
 /* Navbar Color Change */
+
+function initNavbarAnimations() {
 
 gsap.set(".navbar", {
     backgroundColor: colorTransparent,
@@ -59,3 +60,10 @@ gsap.set(".button.navbar-menu-button", {
     color: colorWhite
   }, '<');
   
+}
+
+  // Check if viewport is above 767px and run the function if true
+if (window.innerWidth > 991) {
+  initNavbarAnimations();
+}
+
