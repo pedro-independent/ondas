@@ -22,7 +22,7 @@ let tl = gsap.timeline({
 });
 
 
-
+ 
 /* Navbar Color Change */
 
 function initNavbarAnimations() {
