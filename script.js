@@ -21,6 +21,8 @@ let tl = gsap.timeline({
     width: "100%", duration: 1
 });
 
+
+
 /* Navbar Color Change */
 
 function initNavbarAnimations() {
@@ -42,7 +44,7 @@ gsap.set(".button.navbar-menu-button", {
 
   let tlNav = gsap.timeline({
     scrollTrigger: {
-      trigger: ".section_home-hero",
+      trigger: ".section_home-hero, .section-servico-hero",
       start: "center top",
       end: "80% top",
       scrub: true,
