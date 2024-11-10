@@ -60,7 +60,7 @@ gsap.set(".button.navbar-menu-button", {
   .to(".button.navbar-menu-button", {
     backgroundColor: colorBlue,
     color: colorWhite
-  }, '<');
+  }, '<'); 
   
 }
 
