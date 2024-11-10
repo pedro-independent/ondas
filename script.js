@@ -27,6 +27,7 @@ let tl = gsap.timeline({
 
 function initNavbarAnimations() {
 
+  if (window.innerWidth > 991 &&  (document.querySelector('.section_home-hero') || document.querySelector('.section-servico-hero'))) {
   console.log("RUN initNavbarAnimations");
 
 gsap.set(".navbar", {
@@ -63,6 +64,7 @@ gsap.set(".button.navbar-menu-button", {
     backgroundColor: colorBlue,
     color: colorWhite
   }, '<'); 
+}
   
 }
 
