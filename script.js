@@ -68,6 +68,7 @@ gsap.set(".button.navbar-menu-button", {
 
   // Check if viewport is above 767px and run the function if true
 if (window.innerWidth > 991 &&  (document.querySelector('.section_home-hero') || document.querySelector('.section-servico-hero'))) {
+  console.log("if passed");
   initNavbarAnimations();
 }
 
