@@ -27,6 +27,8 @@ let tl = gsap.timeline({
 
 function initNavbarAnimations() {
 
+  console.log("RUN initNavbarAnimations");
+
 gsap.set(".navbar", {
     backgroundColor: colorTransparent,
   });
