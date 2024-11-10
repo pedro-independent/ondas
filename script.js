@@ -4,7 +4,7 @@ let colorLightBlue ="var(--base-color-brand--main-blue)";
 let colorTransparent ="var(--base-color-brand--transparent)";
 
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger); 
 
 /* Homepage Video Reveal */
 
