@@ -78,14 +78,13 @@ let tl = gsap
   });
 
 /* Navbar Color Change */
-
 function initNavbarAnimations() {
   gsap.set(".navbar", {
     backgroundColor: colorTransparent,
   });
 
   gsap.set(
-    [".navbar_link", ".dropdown-chevron", ".navbar-logo", ".navbar-logo-text"],
+    [".navbar_link", ".dropdown-chevron", ".navbar-logo", ".navbar-logo-text", ".is--menu-link"],
     {
       color: colorWhite,
     }
@@ -115,6 +114,7 @@ function initNavbarAnimations() {
         ".dropdown-chevron",
         ".navbar-logo",
         ".navbar-logo-text",
+        ".is--menu-link",
       ],
       {
         color: colorBlue,
