@@ -63,6 +63,7 @@ function initButtonCharacterStagger() {
   initButtonCharacterStagger();
 
 /* Homepage Video Reveal */
+if (window.innerWidth > 991) {
 let tl = gsap
   .timeline({
     scrollTrigger: {
@@ -76,7 +77,7 @@ let tl = gsap
   .to(".home-hero-vid", {
     width: "100%",
   });
-
+}
 /* Navbar Color Change */
 function initNavbarAnimations() {
   gsap.set(".navbar", {
@@ -140,4 +141,5 @@ if (
   console.log("if passed");
   initNavbarAnimations();
 }
+
 
