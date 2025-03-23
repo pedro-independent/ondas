@@ -5,6 +5,58 @@ let colorTransparent = "var(--base-color-brand--transparent)";
 
 gsap.registerPlugin(ScrollTrigger);
 
+/* Page Transition */
+
+// Code that runs on pageload (reveals the page)
+gsap.to(".load-transition-item", {
+  scaleX: 0,
+  duration: 0.75,
+  ease: "power4.in",
+  stagger: 0.05,
+  transformOrigin: "left",
+  onComplete: () => {
+    gsap.set(".load-transition", { display: "none" });
+  }
+});
+
+// Code that runs on click of a link (hides the page)
+$(document).ready(function () {
+  $("a").on("click", function (e) {
+    if (
+      $(this).prop("hostname") === window.location.host &&
+      $(this).attr("href").indexOf("#") === -1 &&
+      $(this).attr("target") !== "_blank"
+    ) {
+      e.preventDefault();
+      let destination = $(this).attr("href");
+      gsap.set(".load-transition", { display: "flex" });
+      gsap.fromTo(
+        ".load-transition-item",
+        { scaleX: 0 },
+        {  
+          scaleX: 1,
+          duration: 0.75,
+          ease: "power4.out",
+          stagger: 0.05,
+          transformOrigin: "right",
+          onComplete: () => {
+            window.location = destination;
+          }
+        }
+      );
+    }
+  });
+
+  // On click of the back button
+  window.onpageshow = function (event) {
+    if (event.persisted) {
+      window.location.reload();
+    }
+  };
+});
+
+
+
 /* Detect Scrolling Direction */
 function initDetectScrollingDirection() {
   let lastScrollTop = 0;
