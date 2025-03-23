@@ -10,9 +10,9 @@ gsap.registerPlugin(ScrollTrigger);
 // Code that runs on pageload (reveals the page)
 gsap.to(".load-transition-item", {
   scaleX: 0,
-  duration: 0.75,
+  duration: 0.5,
   ease: "power4.in",
-  stagger: 0.05,
+  stagger: 0.04,
   transformOrigin: "left",
   onComplete: () => {
     gsap.set(".load-transition", { display: "none" });
@@ -35,9 +35,9 @@ $(document).ready(function () {
         { scaleX: 0 },
         {  
           scaleX: 1,
-          duration: 0.75,
+          duration: 0.5,
           ease: "power4.out",
-          stagger: 0.05,
+          stagger: 0.04,
           transformOrigin: "right",
           onComplete: () => {
             window.location = destination;
